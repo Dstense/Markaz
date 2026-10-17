@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Markaz Restaurant, Jogeshwari West, Mumbai — Mughlai, North Indian, Biryani, Chinese, shakes and beverages.">
+<meta name="description" content="Discover Markaz Restaurant in Jogeshwari West, Mumbai. Explore Mughlai favourites, biryani, tandoor dishes and more.">
+<meta name="theme-color" content="#211f1b">
+<meta name="color-scheme" content="light">
+<meta property="og:title" content="MARKAZ — The joy of eating together">
+<meta property="og:description" content="Mughlai comfort, tandoor favourites and generous plates made for the people around your table.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=85">
 <title>MARKAZ — Restaurant · Jogeshwari West</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -10,13 +16,13 @@
 </head>
 <body>
 <header class="site-nav" id="site-nav">
-  <a class="logo" href="#top"><span class="logo-mark">M</span><span>MARKAZ</span></a>
-  <nav class="nav-links"><a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#reviews">REVIEWS</a><a href="#visit">VISIT</a></nav>
+  <a class="logo" href="#top" aria-label="Markaz Restaurant home"><span class="logo-mark">M</span><span>MARKAZ</span></a>
+  <nav class="nav-links" id="primary-navigation" aria-label="Main navigation"><a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#reviews">REVIEWS</a><a href="#visit">VISIT</a></nav>
   <div class="nav-actions"><a href="tel:+919870986465">CALL</a><a class="outline" href="https://www.google.com/maps/search/?api=1&query=Markaz+Restaurant+Jogeshwari+West+Mumbai" target="_blank" rel="noopener">DIRECTIONS ↗</a></div>
-  <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span></button>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span></button>
 </header>
 
-<main id="top">
+<main id="top">\n<a class="skip-link" href="#main-content">Skip to content</a>\n<div id="main-content">
 <section class="hero">
   <div class="hero-photo"></div><div class="hero-overlay"></div>
   <div class="hero-meta left">JOGESHWARI WEST · MUMBAI</div><div class="hero-meta right">OPEN DAILY · 10:00 — 00:30</div>
@@ -42,13 +48,20 @@
 <section class="editorial menu" id="menu">
   <div class="label"><span>02</span><span>THE MENU</span></div>
   <div class="menu-heading"><div><h2>A LITTLE BIT<br>OF <em>EVERYTHING.</em></h2><p>North Indian, Mughlai, biryani and Chinese favourites — plus the dishes Markaz is known for.</p></div><a class="outline dark" href="https://www.zomato.com/mumbai/markaz-restaurant-jogeshwari/menu" target="_blank" rel="noopener">VIEW FULL MENU ↗</a></div>
+  <div class="menu-tools" aria-label="Filter menu dishes">
+    <button class="menu-filter is-active" type="button" data-filter="all" aria-pressed="true">ALL PICKS</button>
+    <button class="menu-filter" type="button" data-filter="grill" aria-pressed="false">FROM THE GRILL</button>
+    <button class="menu-filter" type="button" data-filter="rice" aria-pressed="false">RICE &amp; BIRYANI</button>
+    <button class="menu-filter" type="button" data-filter="comfort" aria-pressed="false">COMFORT FAVOURITES</button>
+  </div>
+  <p class="menu-results" aria-live="polite">Showing all signature picks</p>
   <div class="menu-grid">
-    <article class="dish"><div class="dish-photo d1"><span>01</span></div><div class="dish-copy"><h3>SCHEZWAN TANDOORI CHICKEN</h3><p>Smoky, charred and built for the first order.</p></div></article>
-    <article class="dish"><div class="dish-photo d2"><span>02</span></div><div class="dish-copy"><h3>CHICKEN TIKKA BIRYANI</h3><p>Fragrant rice, tandoori flavour and slow warmth.</p></div></article>
-    <article class="dish"><div class="dish-photo d3"><span>03</span></div><div class="dish-copy"><h3>BUTTER CHICKEN</h3><p>Classic comfort with a rich, silky finish.</p></div></article>
-    <article class="dish"><div class="dish-photo d4"><span>04</span></div><div class="dish-copy"><h3>CHICKEN CRISPY</h3><p>Crisp texture, bold flavour and table-friendly portions.</p></div></article>
-    <article class="dish"><div class="dish-photo d5"><span>05</span></div><div class="dish-copy"><h3>KABAB</h3><p>Charred edges, tender centre, made for sharing.</p></div></article>
-    <article class="dish"><div class="dish-photo d6"><span>06</span></div><div class="dish-copy"><h3>ROTI &amp; NAAN</h3><p>The essential companion to a proper main course.</p></div></article>
+    <article class="dish" data-category="grill"><div class="dish-photo d1" role="img" aria-label="Tandoori chicken with charred edges"><span>01</span><span class="dish-tag">FROM THE GRILL</span></div><div class="dish-copy"><h3>SCHEZWAN TANDOORI CHICKEN</h3><p>Smoky, charred and built for the first order.</p></div></article>
+    <article class="dish" data-category="rice"><div class="dish-photo d2" role="img" aria-label="Chicken tikka biryani rice dish"><span>02</span><span class="dish-tag">RICE &amp; BIRYANI</span></div><div class="dish-copy"><h3>CHICKEN TIKKA BIRYANI</h3><p>Fragrant rice, tandoori flavour and slow warmth.</p></div></article>
+    <article class="dish" data-category="comfort"><div class="dish-photo d3" role="img" aria-label="Butter chicken curry"><span>03</span><span class="dish-tag">COMFORT FAVOURITE</span></div><div class="dish-copy"><h3>BUTTER CHICKEN</h3><p>Classic comfort with a rich, silky finish.</p></div></article>
+    <article class="dish" data-category="grill"><div class="dish-photo d4" role="img" aria-label="Crispy fried chicken starter"><span>04</span><span class="dish-tag">FROM THE GRILL</span></div><div class="dish-copy"><h3>CHICKEN CRISPY</h3><p>Crisp texture, bold flavour and table-friendly portions.</p></div></article>
+    <article class="dish" data-category="grill"><div class="dish-photo d5" role="img" aria-label="Kabab selection"><span>05</span><span class="dish-tag">FROM THE GRILL</span></div><div class="dish-copy"><h3>KABAB</h3><p>Charred edges, tender centre, made for sharing.</p></div></article>
+    <article class="dish" data-category="comfort"><div class="dish-photo d6" role="img" aria-label="Indian naan and breads"><span>06</span><span class="dish-tag">COMFORT FAVOURITE</span></div><div class="dish-copy"><h3>ROTI &amp; NAAN</h3><p>The essential companion to a proper main course.</p></div></article>
   </div>
   <div class="menu-note"><span>FULL MENU</span><p>Soups · Starters · Main Course · Breads · Rice &amp; Biryani · Fried Rice &amp; Noodles · Pizza · Snacks · Desserts · Drinks</p></div>
 </section>
@@ -61,6 +74,6 @@
 </main>
 
 <footer class="editorial footer"><div class="footer-top"><a class="logo" href="#top"><span class="logo-mark">M</span><span>MARKAZ</span></a><p>GOOD FOOD. GOOD COMPANY.<br>JOGESHWARI WEST, MUMBAI.</p><div class="footer-links"><a href="#menu">MENU</a><a href="#visit">VISIT</a><a href="https://www.google.com/maps/search/?api=1&query=Markaz+Restaurant+Jogeshwari+West+Mumbai" target="_blank" rel="noopener">MAP ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> MARKAZ RESTAURANT</span><span>DESIGNED FOR THE TABLE</span></div></footer>
-<div class="mobile-bar"><a href="tel:+919870986465">CALL</a><a href="https://www.google.com/maps/search/?api=1&query=Markaz+Restaurant+Jogeshwari+West+Mumbai" target="_blank" rel="noopener">DIRECTIONS</a><a href="https://www.zomato.com/mumbai/markaz-restaurant-jogeshwari/order" target="_blank" rel="noopener">ORDER</a></div>
-<script src="script.js"></script>
+<div class="mobile-bar" aria-label="Quick actions"><a href="tel:+919870986465">CALL</a><a href="https://www.google.com/maps/search/?api=1&query=Markaz+Restaurant+Jogeshwari+West+Mumbai" target="_blank" rel="noopener">DIRECTIONS</a><a href="https://www.zomato.com/mumbai/markaz-restaurant-jogeshwari/order" target="_blank" rel="noopener">ORDER</a></div>
+<script src="script.js" defer></script>
 </body></html>
