@@ -204,3 +204,11 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 @media (prefers-reduced-motion: reduce) {
   .hero-photo, .photo-break-image, .closing-image { animation: none; transform: none; }
 }
+
+
+/* Scroll reveals remain subtle and respect reduced motion. */
+.reveal-ready { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal-ready.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready, .reveal-ready.is-visible { opacity: 1; transform: none; transition: none; }
+}
