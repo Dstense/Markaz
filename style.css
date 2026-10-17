@@ -212,3 +212,57 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 @media (prefers-reduced-motion: reduce) {
   .reveal-ready, .reveal-ready.is-visible { opacity: 1; transform: none; transition: none; }
 }
+
+
+/* Phase One — real restaurant imagery, transparent menu pricing, clear ordering */
+[hidden] { display: none !important; }
+.gallery-section { padding: 125px 0 115px; border-top: 1px solid var(--s); }
+.gallery-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin: 54px 0 46px; }
+.gallery-heading h2 { font: 300 clamp(58px, 6.4vw, 92px)/.84 var(--serif); letter-spacing: -.04em; text-transform: uppercase; margin: 0 0 22px; }
+.gallery-heading h2 em { color: var(--a); }
+.gallery-heading p { color: var(--e); max-width: 460px; font-size: 14px; line-height: 1.6; margin: 0; }
+.real-gallery { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 18px; align-items: stretch; }
+.gallery-card { margin: 0; min-width: 0; }
+.gallery-card a { display: block; overflow: hidden; background: #b8a58d; aspect-ratio: 4 / 3; }
+.gallery-card-tall a { aspect-ratio: 4 / 3; }
+.gallery-card img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1), filter .3s; }
+.gallery-card a:hover img { transform: scale(1.045); filter: saturate(1.08); }
+.gallery-card figcaption { border-bottom: 1px solid var(--s); padding: 14px 0 18px; }
+.gallery-card figcaption span { display: block; color: var(--w); font-size: 9px; letter-spacing: .1em; margin-bottom: 7px; }
+.gallery-card figcaption strong { font: 300 27px/1.1 var(--serif); }
+.gallery-credit { margin: 20px 0 0; color: var(--w); font-size: 10px; line-height: 1.5; }
+.dish-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.dish-title-row h3 { flex: 1; }
+.dish-price { flex: 0 0 auto; color: var(--o); font: 500 16px/1.25 var(--serif); white-space: nowrap; }
+.price-disclaimer { margin-top: 14px !important; max-width: 850px; font-size: 11px !important; line-height: 1.65; }
+.menu-order-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 16px; }
+.menu-order-links a { font-size: 10px; letter-spacing: .08em; text-decoration: underline; text-underline-offset: 4px; }
+.menu-order-links a:hover { color: var(--a); }
+.hero-buttons { flex-wrap: wrap; }
+.hero-buttons .order-cta { background: var(--p); color: var(--o); border-color: var(--p); }
+.hero-buttons .order-cta:hover { background: var(--a); border-color: var(--a); color: #fffaf2; }
+.closing-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 1000px) {
+  .real-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-card-tall { grid-column: 1 / -1; }
+  .gallery-card-tall a, .gallery-card-tall img { aspect-ratio: 16 / 7; }
+}
+@media (max-width: 640px) {
+  .gallery-section { padding: 82px 0 75px; }
+  .gallery-heading { display: block; margin: 40px 0 30px; }
+  .gallery-heading h2 { font-size: clamp(54px, 14vw, 68px); }
+  .gallery-heading .outline { margin-top: 22px; }
+  .real-gallery { grid-template-columns: 1fr; gap: 24px; }
+  .gallery-card-tall { grid-column: auto; }
+  .gallery-card-tall a, .gallery-card-tall img { aspect-ratio: 4 / 3; }
+  .gallery-card a, .gallery-card img { aspect-ratio: 4 / 3; }
+  .dish-title-row { gap: 8px; }
+  .dish-title-row h3 { font-size: 12px; }
+  .dish-price { font-size: 17px; }
+  .menu-order-links { gap: 14px; }
+  .hero-buttons { align-items: flex-start; }
+  .hero-buttons .outline { padding: 13px 12px; }
+  .closing-actions { align-items: flex-start; flex-direction: column; }
+  .mobile-bar { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .mobile-bar a { font-size: 8px; padding: 14px 2px; }
+}
