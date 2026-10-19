@@ -368,3 +368,13 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--a); outline-off
 @media (prefers-reduced-motion: reduce) {
   .track { animation: none; }
 }
+
+
+/* Smooth, continuous signature-dishes ticker below the hero */
+.marquee { overflow: hidden; }
+.marquee .track { will-change: transform; animation: markaz-ticker 24s linear infinite; }
+.marquee:hover .track { animation-play-state: paused; }
+@keyframes markaz-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee .track { animation: none; }
+}
