@@ -433,3 +433,19 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--a); outline-off
 @media (prefers-reduced-motion: reduce) {
   .dish-image { transition: none; }
 }
+
+
+/* Make the mobile Call Us action stand out in the fixed quick-action bar */
+.mobile-bar .mobile-call-cta {
+  background: var(--a);
+  color: var(--m);
+  font-weight: 700;
+  letter-spacing: .04em;
+  border-right: 1px solid rgba(41, 38, 34, .25);
+}
+.mobile-bar .mobile-call-cta:active { filter: brightness(.94); }
+@media (max-width: 640px) {
+  .mobile-bar { grid-template-columns: repeat(4, minmax(0, 1fr)); min-height: 58px; }
+  .mobile-bar a { min-height: 58px; display: flex; align-items: center; justify-content: center; gap: 4px; padding: 12px 2px; font-size: 9px; white-space: nowrap; }
+  body { padding-bottom: 58px; }
+}
