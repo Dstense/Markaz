@@ -378,3 +378,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--a); outline-off
 @media (prefers-reduced-motion: reduce) {
   .marquee .track { animation: none; }
 }
+
+
+/* Ensure the signature-dishes ticker actually moves on all devices */
+.marquee { display: block !important; overflow: hidden !important; }
+.marquee .track { display: flex !important; width: max-content !important; animation: markaz-ticker 18s linear infinite !important; animation-play-state: running !important; transform: translateZ(0); }
+.marquee:hover .track { animation-play-state: running !important; }
+@keyframes markaz-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
