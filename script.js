@@ -7,6 +7,7 @@ const menuResults = document.querySelector('.menu-results');
 function closeNavigation() {
   if (!nav || !toggle) return;
   nav.classList.remove('open');
+  document.body.classList.remove('nav-open');
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-label', 'Open menu');
 }
@@ -16,10 +17,15 @@ if (nav && toggle) {
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('nav-open', open);
   });
 
   document.querySelectorAll('.site-nav .nav-links a, .site-nav .nav-actions a').forEach((link) => {
     link.addEventListener('click', closeNavigation);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (nav.classList.contains('open') && !nav.contains(event.target)) closeNavigation();
   });
 
   document.addEventListener('keydown', (event) => {
